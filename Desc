@@ -1,3 +1,10 @@
 Desc file.
 
-1. 
+1. Nov 16-17:
+	1) Use Python to create a dataproc cluster
+	2) Create a spark program to:
+		a. Read a sample data set file
+		b. Build a Logistic Regression Model
+		
+		
+		
