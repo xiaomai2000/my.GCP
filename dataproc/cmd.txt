@@ -1,5 +1,30 @@
+
+*****************  Lab 1  ******************
 # Create dataproc cluster by python client.
 
-
 python create.dataproc.cluster.py my-project-1011-1012 us-east1 todel-dataproc-1113
+
+
+
+*****************  Lab 2  ******************
+
+# Reference: https://www.cloudskillsboost.google/focuses/3390?locale=en&parent=catalog
+
+# Open Cloud shell
+
+# Step 1: upload test data:
+Create a bucket "my-project-1011-1012-dsongcp" with region us-west1
+upload test data "sample_svm_data" to this bucket, the file path is:  gs://my-project-1011-1012-dsongcp/spark/sample_svm_data.txt
+
+
+# Step 2: Create dataproc cluster:
+export PROJECT_ID=$(gcloud info --format='value(config.project)')
+export BUCKET_NAME=$PROJECT_ID-dsongcp
+./create_cluster.sh $BUCKET_NAME us-west1
+
+
+# Step 3: 
+Go to "Web Interfaces" tab and then click "JupyterLab"
+Run the python pgm in Jupyter notebook - see ch6cluster.run.model.01.ipynb
+
 
